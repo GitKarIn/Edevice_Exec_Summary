@@ -1,0 +1,100 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar li a {
+font-size: 16px;
+}
+
+#menu .right {
+    float: right;
+}
+
+#book-source {
+  display: none;
+}
+
+#book-edit {
+  display: none;
+}
+
+li.book-part {
+  font-size: 1.3em;
+  color: blue;
+}
+
+li.a[href="index.html" title="Electronic Data Entry Software Options for IEP Surveys"] {
+  font-size: 2em;
+}
+
+
+/*-------------------------------------*/
+/* HEADER STYLES */
+/*-------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+        font-weight: inherit;
+    }
+
+h1 {
+    font-size: 28px;
+    line-height: 54px;
+    letter-spacing: normal;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: normal;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: normal;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+h4, h5, h6, h7 {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: normal;
+}
+
+body{
+  font-family: Helvetica;
+  font-size: 12pt;
+
+}
+
+.main-container {
+  max-width: 60% !important;
+  margin: auto;

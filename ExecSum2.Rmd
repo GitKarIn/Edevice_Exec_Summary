@@ -1,0 +1,126 @@
+--- 
+title: "Executive Summary: Electronic Data Entry Options for IEP Surveys"
+author: "IEP DUWG 'e-Device' Sub-group"
+date: "`r Sys.Date()`"
+output: 
+  #html_document:
+  pdf_document:
+    
+knit: rmarkdown::render #this is a workaround 
+# Hopefully this problem will be resolved
+# https://github.com/rstudio/rmarkdown/issues/2344
+css: style_esum.css
+header-includes:
+   - \usepackage{dcolumn}
+   - \usepackage{pdflscape}
+   - \begin{landscape}
+   - \end{landscape}
+   - \usepackage{caption}
+---
+
+
+## **Take Home Message:** {-}
+
+**IEP should transition to electronic data entry in order to improve efficiency and data quality.**
+
+Digital data entry methods facilitate more accurate and rapid reporting of survey data - as compared to paper data sheets - by reducing field entry errors, eliminating manual entry QC checks, and improving overall processing efficiency. 
+
+
+## **Problem:** {-}
+
+**IEP still uses paper data sheets for most surveys.**  
+
+**IEP survey leads have significant questions about electronic data entry methods.** Several surveys have tried out different e-devices for collecting field data, but they haven't been broadly adopted due to lack of available information about which tools are most appropriate for survey applications.  
+
+
+
+## **Methods:** {-}
+
+The DUWG formed a sub-team and carried out the following steps:
+
+1. **Polled IEP survey teams** to learn what digital data entry tools are currently used within the IEP network; 
+2. **Evaluated the top software tools** with interviews/presentations from experienced users and product vendors; 
+3. **Conducted software trials** using apps specifically configured for IEP survey data collections;
+4. **Developed an open-document forum** for exchange of technical information on e-devices across IEP;
+5. **Summarized pros and cons** of the top e-device software options.
+
+
+## **Solutions:** {-}
+
+Two tools were developed to promote the transition to electronic data entry methods:
+
+- **Summarized and expanded listing of the specific pros and cons of each of the top data entry software apps (Table 1 below)**
+
+- **An open-access html document and Github repository for information related to electronic field data entry software/hardware for IEP Survey applications (Link to [Github repo](https://github.com/InteragencyEcologicalProgram/e-device) and [E-device document Introduction](https://interagencyecologicalprogram.github.io/e-device/))**
+
+
+## **Impacts:** {-}
+
+Adopting digital data entry protocols will require time to develop the platforms and software and to train the staff. In addition, IEP surveys will have to budget for the purchase and maintenance of mobile field devices, data loggers and/or electronic fish measurement boards. **In the longer term, the time and staff-power savings in reduced data entry and post-collection processing will significantly outweigh equipment and training time expenditures.**
+
+
+## **Table 1:** {-}
+
+
+
+<!-- # specifying font style for bold because H3 does not render bold "**" option-->
+::: {#Tab1  style="font-size:16px; font-family: Arial, Helvetica, sans-serif;"}
+**Table 1:  The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described for each [criteria category](https://interagencyecologicalprogram.github.io/e-device/software-comparison-criteria.html).**
+:::
+
+
+\captionsetup{width=25cm}
+
+```{r pcread, echo = FALSE, include=TRUE, message=FALSE, warning=FALSE}
+library(readxl)
+library(kableExtra)
+# reset tabs 
+tabs <-    "C:/Users/KAlstad/Documents/Github_C/e-deviceIEP/tables/"
+
+proscons <- read_excel(file.path(tabs,"ProsCons2.xlsx"))
+
+# Change the in-line format symbols so that it will be recognized by latex
+# define function that replaces double asterisks with LaTeX \textbf{}
+format_text <- function(x) {
+  if(is.character(x)) {
+    #gsub("\\*\\*(.*?)\\*\\*", "\\\\textbf{\\1}", x)
+    gsub("\\*\\*(.*?)\\*\\*", "\\1", x)
+  } else {
+    x
+  }
+}
+
+# apply format_text() to all character columns in df
+proscons[, sapply(proscons, is.character)] <- apply(proscons[, sapply(proscons, is.character)], MARGIN = 2, format_text)
+
+
+```
+
+
+
+```{r procon, echo = FALSE, include=TRUE, message=FALSE, warning=FALSE,  tab.cap=NULL, out.width='100%', tab.asp=.75, tab.align='left'}
+
+library(kableExtra)
+library(dplyr)
+library(knitr)
+
+# 'The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described.'
+
+# Replace NAs with empty strings 
+proscons[is.na(proscons)] <- ""
+
+kable(proscons, format = 'latex',booktabs = TRUE,  longtable = TRUE, caption = "The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described for each criteria.") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"),bootstrap_options = "bordered", font_size = 10) %>%
+  kableExtra::landscape() %>%
+  row_spec(0, bold = T, font_size = 10, extra_css = "border-bottom: 1px solid") %>% 
+  column_spec(1, width = "2.0cm") %>%
+  column_spec(2, width = "3.8cm") %>%
+  column_spec(3, width = "3.8cm") %>%
+  column_spec(4, width = "3.8cm") %>%
+  column_spec(5, width = "3.8cm") %>%
+  column_spec(6, width = "2.0cm") %>%
+  column_spec(7, width = "2.0cm")
+
+```
+
+

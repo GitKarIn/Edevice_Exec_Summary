@@ -1,0 +1,218 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{dcolumn}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Executive Summary: Electronic Data Entry Options for IEP Surveys},
+  pdfauthor={IEP DUWG `e-Device' Sub-group},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Executive Summary: Electronic Data Entry Options for IEP Surveys}
+\author{IEP DUWG `e-Device' Sub-group}
+\date{2023-06-20}
+
+\begin{document}
+\maketitle
+
+\hypertarget{take-home-message}{%
+\subsection*{\texorpdfstring{\textbf{Take Home
+Message:}}{Take Home Message:}}\label{take-home-message}}
+\addcontentsline{toc}{subsection}{\textbf{Take Home Message:}}
+
+\textbf{IEP should transition to electronic data entry in order to
+improve efficiency and data quality.}
+
+Digital data entry methods facilitate more accurate and rapid reporting
+of survey data - as compared to paper data sheets - by reducing field
+entry errors, eliminating manual entry QC checks, and improving overall
+processing efficiency.
+
+\hypertarget{problem}{%
+\subsection*{\texorpdfstring{\textbf{Problem:}}{Problem:}}\label{problem}}
+\addcontentsline{toc}{subsection}{\textbf{Problem:}}
+
+\textbf{IEP still uses paper data sheets for most surveys.}
+
+\textbf{IEP survey leads have significant questions about electronic
+data entry methods.} Several surveys have tried out different e-devices
+for collecting field data, but they haven't been broadly adopted due to
+lack of available information about which tools are most appropriate for
+survey applications.
+
+\hypertarget{methods}{%
+\subsection*{\texorpdfstring{\textbf{Methods:}}{Methods:}}\label{methods}}
+\addcontentsline{toc}{subsection}{\textbf{Methods:}}
+
+The DUWG formed a sub-team and carried out the following steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Polled IEP survey teams} to learn what digital data entry
+  tools are currently used within the IEP network;
+\item
+  \textbf{Evaluated the top software tools} with
+  interviews/presentations from experienced users and product vendors;
+\item
+  \textbf{Conducted software trials} using apps specifically configured
+  for IEP survey data collections;
+\item
+  \textbf{Developed an open-document forum} for exchange of technical
+  information on e-devices across IEP;
+\item
+  \textbf{Summarized pros and cons} of the top e-device software
+  options.
+\end{enumerate}
+
+\hypertarget{solutions}{%
+\subsection*{\texorpdfstring{\textbf{Solutions:}}{Solutions:}}\label{solutions}}
+\addcontentsline{toc}{subsection}{\textbf{Solutions:}}
+
+Two tools were developed to promote the transition to electronic data
+entry methods:
+
+\begin{itemize}
+\item
+  \textbf{Summarized and expanded listing of the specific pros and cons
+  of each of the top data entry software apps (Table 1 below)}
+\item
+  \textbf{An open-access html document and Github repository for
+  information related to electronic field data entry software/hardware
+  for IEP Survey applications (Link to
+  \href{https://github.com/InteragencyEcologicalProgram/e-device}{Github
+  repo} and
+  \href{https://interagencyecologicalprogram.github.io/e-device/}{E-device
+  document Introduction})}
+\end{itemize}
+
+\hypertarget{impacts}{%
+\subsection*{\texorpdfstring{\textbf{Impacts:}}{Impacts:}}\label{impacts}}
+\addcontentsline{toc}{subsection}{\textbf{Impacts:}}
+
+Adopting digital data entry protocols will require time to develop the
+platforms and software and to train the staff. In addition, IEP surveys
+will have to budget for the purchase and maintenance of mobile field
+devices, data loggers and/or electronic fish measurement boards.
+\textbf{In the longer term, the time and staff-power savings in reduced
+data entry and post-collection processing will significantly outweigh
+equipment and training time expenditures.}
+
+\hypertarget{table-1}{%
+\subsection*{\texorpdfstring{\textbf{Table
+1:}}{Table 1:}}\label{table-1}}
+\addcontentsline{toc}{subsection}{\textbf{Table 1:}}
+
+\leavevmode\vadjust pre{\hypertarget{Tab1}{}}%
+\textbf{Table 1: The top software tools used for field data entry are
+listed and the Pros and Cons of each tool are briefly described for each
+\href{https://interagencyecologicalprogram.github.io/e-device/software-comparison-criteria.html}{criteria
+category}.}
+
+\begin{table}
+\centering
+\fontsize{18}{20}\selectfont
+\begin{tabular}{>{}l>{}l>{}lllll}
+\toprule
+Software & Forms & Data Interface & External Devices & HW Platform Compatibility & Security & Business Model/Price\\
+\midrule
+\textbf{ESRI Survey123} & **Pros:** Geo-referencing of all objects; map layers available; & **Cons**: difficult to configure desired format to view/edit data 'on-the-fly'  in the field & **Cons:** Cannot connect to sensors directly & **Pros:**  Can be run on all platform types: ios, Android, and PC (web only) & **Pros:** thoroughly vetted in state agencies & Expensive; but well established CA state license agreement\\
+MS Power Apps & **Pros:**Low-code/No-code; customizable; Uses Excel-like function; AI support & **Pros:**  Power Platform connection provide easy connectivity to SQL, OneDrive databases.
+
+**Cons:** Even though Power Apps can be run on a Windows system (on/off-line), it cannot read in data from local drive & **Pros:** It is possible to control external devices using PowerApps
+
+\textbf{**Cons:** An Azure license is required to connect to external devices (not available with Power Apps for Government Plans)} & **Pros:**  Can be run on all platform types: ios, Android, and Window (including off-line) & **Pros:** thoroughly vetted in state agencies & Moderate\\
+Fulcrum & **Pros:**  Intuitive form-building interface; Auto-formating for modern look; 
+
+\textbf{**Cons:**  Complex design requires coding; Limits to nesting data} & **Pros:**  Provides many types of API connections e.g., to SQL, OneDrive & **Cons:** Even though Power Apps can be run on a Windows system (on/off-line), it cannot read in data from local drive & **Pros:**  Can be run on all platform types: ios, Android, and PC (web only) & **Pros:**security audits for projects with aerospace company, toyota, verison, telegraph & Moderate\\
+\textbf{Pendragon} &  &  & **Cons:**  Cannot read in data from local drive; cannot connect to sensors directly &  & **Cons:** Not FedRAMP certified & Moderate\\
+FEED & **Pros:**  Customized form specific to users application; Designed specifically for fish surveys & **Pros:**  Built on local Access db so compatible will all M.S. connectivity
+
+**Cons:** No built in Cloud connectivity; no built in API & **Pros:**  Can connect to external sensors; uses local area network & **Cons:**  Only works on Windows & **Pros:**LAN based system so low security risk & One-time configuration fee (~$2000)
+
+\textbf{**Cons:** One person company; questions about future company composition}\\
+\addlinespace
+\textbf{Big Fin} & **Pros:**Designed specifically for fish surveys & **Cons:** API connection to Cloud base data or transfer needs to be customized & **Pros:**  Connects directly to many types of external sensors & **Cons:**  Only works on Android &  & Moderate\\
+PDF/R-scraping & **Cons:**  Not as many options to control PDF form input & **Pros:**R-based PDF scraped data can be formated in R and transferred remotely with R-based API protocols;
+
+\textbf{**Cons:** All data configuratons must be programmed} & **Cons:**  No photo options; no options to connect to external sensors & **Pros:** PDF forms are usable on all platform types; PDF forms may be used on mobile apps using Adobe Reader app & **Pros:**low security risk & **Pros:**Least expensive approach\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
