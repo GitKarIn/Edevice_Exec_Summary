@@ -21,16 +21,16 @@ header-includes:
 
 ## **Take Home Message:** {-}
 
-**IEP should transition to electronic data entry in order to improve efficiency and data quality.**
+**IEP should transition to electronic data entry to improve efficiency and data quality.** 
 
 Digital data entry methods facilitate more accurate and rapid reporting of survey data - as compared to paper data sheets - by reducing field entry errors, eliminating manual entry QC checks, and improving overall processing efficiency. 
 
 
 ## **Problem:** {-}
 
-**IEP still uses paper data sheets for most surveys.**  
+**IEP still uses paper data sheets for most surveys.**  Most IEP surveys still use paper datasheets for data collection. Paper datasheets increase transcription errors, handwriting errors, increased data transfer time, and potential for data loss when compared to electronic data sheets.
 
-**IEP survey leads have significant questions about electronic data entry methods.** Several surveys have tried out different e-devices for collecting field data, but they haven't been broadly adopted due to lack of available information about which tools are most appropriate for survey applications.  
+**IEP survey leads have significant questions about electronic data entry methods.** Several surveys have considered different data entry software and/or hardware devices for collecting field data, but these tools have not been been broadly adopted due to lack of available information about which tools are most appropriate for survey applications.  
 
 
 
@@ -38,25 +38,29 @@ Digital data entry methods facilitate more accurate and rapid reporting of surve
 
 The DUWG formed a sub-team and carried out the following steps:
 
-1. **Polled IEP survey teams** to learn what digital data entry tools are currently used within the IEP network; 
-2. **Evaluated the top software tools** with interviews/presentations from experienced users and product vendors; 
-3. **Conducted software trials** using apps specifically configured for IEP survey data collections;
-4. **Developed an open-document forum** for exchange of technical information on e-devices across IEP;
-5. **Summarized pros and cons** of the top e-device software options.
+- Polled IEP survey teams to learn what digital data entry tools are currently used within the IEP network; 
+
+- Evaluated the top software tools with interviews/presentations from experienced users and product vendors; 
+
+- Conducted software trials using apps specifically configured for IEP survey data collections;
+
+- Developed an open-document forum for exchange of technical information on e-devices across IEP;
+
+- Summarized pros and cons of the top electronic data entry software options.
 
 
 ## **Solutions:** {-}
 
-Two tools were developed to promote the transition to electronic data entry methods:
+Two resources have been developed to promote the transition to electronic data entry methods:
 
-- **Summarized and expanded listing of the specific pros and cons of each of the top data entry software apps (Table 1 below)**
+- **Summarized and expanded listings of the specific pros and cons of each of the top data entry software apps (Table 1 below)**
 
-- **An open-access html document and Github repository for information related to electronic field data entry software/hardware for IEP Survey applications (Link to [Github repo](https://github.com/InteragencyEcologicalProgram/e-device) and [E-device document Introduction](https://interagencyecologicalprogram.github.io/e-device/))**
+- **An open-access html document and Github repository for information related to electronic field data entry software/hardware for IEP Survey applications (Link to [Github repo](https://github.com/InteragencyEcologicalProgram/e-device) and [Electronic data entry document: Introduction](https://interagencyecologicalprogram.github.io/e-device/))**
 
 
-## **Impacts:** {-}
+## **Takeaway:** {-}
 
-Adopting digital data entry protocols will require time to develop the platforms and software and to train the staff. In addition, IEP surveys will have to budget for the purchase and maintenance of mobile field devices, data loggers and/or electronic fish measurement boards. **In the longer term, the time and staff-power savings in reduced data entry and post-collection processing will significantly outweigh equipment and training time expenditures.**
+Adopting digital data entry protocols will require time to develop the field data entry software, establish procedures to transfer data to central database, and train survey staff to use these new tools. In addition, IEP surveys will have to budget for the purchase and maintenance of mobile field devices, data loggers and/or electronic fish measurement boards. **In the long term, the savings in time and effort with the reduction in data entry and post-collection processing will significantly outweigh equipment and training time expenditures.**
 
 
 ## **Table 1:** {-}
@@ -65,7 +69,7 @@ Adopting digital data entry protocols will require time to develop the platforms
 
 <!-- # specifying font style for bold because H3 does not render bold "**" option-->
 ::: {#Tab1  style="font-size:16px; font-family: Arial, Helvetica, sans-serif;"}
-**Table 1:  The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described for each [criteria category](https://interagencyecologicalprogram.github.io/e-device/software-comparison-criteria.html).**
+**Table 1:  Top 7 software applications used by IEP for field data entry with pros and cons for each criteria category, listed in order reviewed by the DUWG sub-team.  The criteria used for comparison are described in the e-device docoument:https://interagencyecologicalprogram.github.io/e-device/software-comparison-criteria.html.**
 :::
 
 
@@ -98,6 +102,7 @@ proscons[, sapply(proscons, is.character)] <- apply(proscons[, sapply(proscons, 
 
 
 
+
 ```{r procon, echo = FALSE, include=TRUE, message=FALSE, warning=FALSE,  tab.cap=NULL, out.width='100%', tab.asp=.75, tab.align='left'}
 
 library(kableExtra)
@@ -109,8 +114,8 @@ library(knitr)
 # Replace NAs with empty strings 
 proscons[is.na(proscons)] <- ""
 
-kable(proscons, format = 'latex',booktabs = TRUE,  longtable = TRUE, caption = "The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described for each criteria.") %>%
-  kable_styling(latex_options = c("hold_position", "repeat_header"),bootstrap_options = "bordered", font_size = 10) %>%
+kable(proscons, format = 'latex',  longtable = TRUE, caption = "The top software tools used for field data entry are listed and the Pros and Cons of each tool are briefly described for each criteria.") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"), stripe_color='my_color', font_size = 10) %>%
   kableExtra::landscape() %>%
   row_spec(0, bold = T, font_size = 10, extra_css = "border-bottom: 1px solid") %>% 
   column_spec(1, width = "2.0cm") %>%
